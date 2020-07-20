@@ -1,0 +1,13 @@
+.Home {
+  position: relative;
+  width: 80%;
+  min-height: 90vh;
+  margin: 20px 10%;
+}
+.Home .Home_cards {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

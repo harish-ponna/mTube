@@ -1,0 +1,7 @@
+.Card {
+  overflow: hidden;
+}
+
+.Card p {
+  margin: 3px 0;
+}

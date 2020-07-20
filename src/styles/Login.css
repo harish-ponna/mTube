@@ -1,0 +1,7 @@
+.Login button {
+  color: black !important;
+  border: 1px rgb(70, 70, 211) solid !important;
+}
+.Login button:focus {
+  outline: none !important;
+}

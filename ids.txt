@@ -1,0 +1,12 @@
+// CLIENT_ID: 622873930008-sts7dqvdc1k69jn8ho9n2tu4e307glfj.apps.googleusercontent.com
+// API_KEY: AIzaSyBsO9UQQ5BDJn_ST9SYFavrT5kzYrDvQMk
+
+
+https://www.googleapis.com/youtube/v3/activitiespart=snippet%2CcontentDetails&channelId={channel—_Id}&maxResults=25&regionCode=tw&key=AIzaSyBsO9UQQ5BDJn_ST9SYFavrT5kzYrDvQMk
+https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=IN&key=AIzaSyCWrfX_KskxDlNobGdd9RyCgAtBoA-5T24
+
+my client id 
+784275697105-it44lq5j5bdpj0itctb4fjl75lfnt7va.apps.googleusercontent.com
+
+my key
+AIzaSyCWrfX_KskxDlNobGdd9RyCgAtBoA-5T24
