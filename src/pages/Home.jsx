@@ -14,14 +14,12 @@ const Home = (props) => {
     videoState: { mostPopularVideos },
     SET_MOST_POPULAR_VIDEOS,
   } = props;
-  useEffect(() => {
-    console.log("ran");
-  }, [mostPopularVideos]);
+  useEffect(() => {}, [mostPopularVideos]);
 
   if (mostPopularVideos.length === 0) {
     const fetchVideos = async () => {
       const { data } = await Axios(
-        `/videos?part=snippet,statistics&chart=mostPopular&maxResults=20&regionCode=IN&key=${keys.API_KEY}`
+        `/videos?part=snippet,statistics&chart=mostPopular&maxResults=15&regionCode=IN&key=${keys.API_KEY}`
       );
       SET_MOST_POPULAR_VIDEOS(data.items);
     };
@@ -34,7 +32,7 @@ const Home = (props) => {
       <div className="Home_cards">
         {mostPopularVideos.length !== 0 ? (
           mostPopularVideos.map((video) => (
-            <Card video={video} size={"medium"} />
+            <Card key={video.id} video={video} size={"medium"} />
           ))
         ) : (
           <h1 style={{ marginLeft: "45%", marginTop: "100px" }}>Loading...</h1>

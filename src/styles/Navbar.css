@@ -95,9 +95,9 @@ nav .search_box button svg {
   color: rgb(88, 87, 87);
 }
 
-/* nav .search_box input:focus {
-  outline: 1px solid rgb(70, 70, 211);
-} */
+nav .search_box input:focus {
+  outline: none;
+}
 
 .search_box button:hover svg {
   color: black;

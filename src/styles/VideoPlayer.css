@@ -3,16 +3,17 @@
   justify-content: space-between;
 }
 .main_video {
-  margin: 30px 30px 0 80px;
-  width: 70%;
-  border: 1px solid red;
+  margin: 30px 10px 0 80px;
+  /* width: 70%; */
+  min-height: 400px;
+  width: auto;
 }
 .related_videos {
   margin-top: 30px;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   align-content: center;
-  border: 1px solid green;
 }

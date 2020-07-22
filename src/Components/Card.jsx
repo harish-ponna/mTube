@@ -1,10 +1,10 @@
 import React from "react";
 import { format } from "../services/format.js";
-
 import "../styles/Card.css";
+import { Link } from "react-router-dom";
 const Card = (props) => {
   const { size } = props;
-  const {
+  let {
     id,
     snippet: {
       title,
@@ -14,8 +14,9 @@ const Card = (props) => {
       },
       channelTitle,
     },
-    statistics: { viewCount, likeCount },
+    statistics,
   } = props.video;
+  if (typeof id === "object") id = id.videoId;
   var imgStyle;
   var cardStyle;
   var contentStyle = { fontSize: "14px", color: "rgb(97, 95, 95)" };
@@ -26,7 +27,6 @@ const Card = (props) => {
     cardStyle = {
       width: "190px",
       height: "218px",
-      // border: "1px solid red",
       margin: "20px 0",
     };
     contentStyle = { fontSize: "12px" };
@@ -35,10 +35,7 @@ const Card = (props) => {
     cardStyle = {
       width: "340px",
       height: "100px",
-      border: "1px solid red",
       display: "flex",
-      justifyContent: "center",
-      // alignItems: "center",
       margin: "0 0 10px 0",
     };
     contentStyle = { marginLeft: "5px", fontSize: "13px" };
@@ -46,7 +43,6 @@ const Card = (props) => {
     imgStyle = { width: "220px", height: "120px" };
     cardStyle = {
       height: "120px",
-      border: "1px solid red",
       display: "flex",
       margin: "22px 0",
     };
@@ -55,16 +51,23 @@ const Card = (props) => {
 
   return (
     <div className="Card" style={cardStyle}>
-      <img style={imgStyle} src={url} alt="dummy" />
+      <Link to={`/video/${id}`}>
+        <img style={imgStyle} src={url} alt="dummy" />
+      </Link>
       <div className="content" style={contentStyle}>
         <p className="title" style={{ color: "black" }}>
           <b>{title}</b>
         </p>
         <p className="channelName">{channelTitle}</p>
-        <p className="views">
-          {format(viewCount)} Views || {format(likeCount)} Likes
-        </p>
-        <p className="description">{description}</p>
+        {statistics && (
+          <>
+            <p className="views">
+              {format(statistics.viewCount)} Views ||{" "}
+              {format(statistics.likeCount)} Likes
+            </p>
+            <p className="description">{description}</p>
+          </>
+        )}
       </div>
     </div>
   );
