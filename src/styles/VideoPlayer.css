@@ -7,7 +7,11 @@
   /* width: 70%; */
   min-height: 400px;
   width: auto;
+ }
+.main_video iframe{
+border: none;
 }
+
 .related_videos {
   margin-top: 30px;
   margin-right: 10px;

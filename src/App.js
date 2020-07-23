@@ -20,7 +20,7 @@ const App = () => {
       <Switch>
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/home" component={Home} />
-        <Route exact path="/trending" component={Trending} />
+        {/* <Route exact path="/trending" component={Trending} /> */}
         <Route exact path="/search" component={Search} />
         <Route exact path="/video/:videoId" component={VideoPlayer} />
         <Redirect to="/home" />
