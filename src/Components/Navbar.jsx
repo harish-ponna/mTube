@@ -1,6 +1,6 @@
 // NPM packages
 import React from "react";
-import { Link, Redirect, withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { useState } from "react";
 

@@ -19,7 +19,6 @@ const Card = (props) => {
   if (typeof id === "object") id = id.videoId;
   var imgStyle;
   var cardStyle;
-  var contentStyle = { fontSize: "14px", color: "rgb(97, 95, 95)" };
   var contentStyle = null;
 
   if (size === "medium") {

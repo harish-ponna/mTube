@@ -3,7 +3,7 @@ import "../styles/VideoPlayer.css";
 import Card from "../Components/Card";
 import { connect } from "react-redux";
 import {
-  SET_RELATED_VIDEOS,
+  // SET_RELATED_VIDEOS,
   SET_CURRENT_VIDEOID,
 } from "../Redux/actions/videoActions";
 import { Axios } from "../services/httpServices";
@@ -27,15 +27,16 @@ const VideoPlayer = (props) => {
         type: "SET_RELATED_VIDEOS",
         payload: data.items,
       });
-      var { data } = await Axios.get(
+      var response = await Axios.get(
         `/commentThreads?part=snippet,replies&videoId=${videoId}&key=${keys.API_KEY}`
       );
       dispatch({
         type: "SET_COMMENT_THREADS",
-        payload: data.items,
+        payload: response.data.items,
       });
     })();
     dispatch({ type: { SET_CURRENT_VIDEOID }, payload: videoId });
+    // eslint-disable-next-line
   }, [videoId]);
   return (
     <div className="VideoPlayer">
@@ -47,6 +48,7 @@ const VideoPlayer = (props) => {
             className="embed-responsive-item"
             src={`https://www.youtube.com/embed/${videoId}`}
             allowFullScreen
+            title="myFrame"
           ></iframe>
         </div>
         <h2 style={{ margin: "40px 0 0 0" }}>Comments</h2>

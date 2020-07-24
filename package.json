@@ -1,4 +1,5 @@
 {
+"homepage":"https://github.com/harish-ponna-au6/mTube.git",
   "name": "mTube",
   "version": "1.0.0",
   "description": "",
@@ -20,6 +21,7 @@
     "redux-thunk": "2.3.0"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "typescript": "3.8.3"
   },
   "scripts": {

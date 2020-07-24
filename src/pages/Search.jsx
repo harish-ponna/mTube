@@ -3,7 +3,7 @@ import Card from "../Components/Card";
 import { parse } from "query-string";
 import { Axios } from "../services/httpServices";
 import { keys } from "../configure";
-import { SET_SEARCHED_VIDEOS } from "../Redux/actions/videoActions";
+// import { SET_SEARCHED_VIDEOS } from "../Redux/actions/videoActions";
 import { videoState } from "../Redux/mapReduxStateToProps";
 import { connect } from "react-redux";
 const Search = (props) => {
@@ -19,6 +19,7 @@ const Search = (props) => {
       );
       props.dispatch({ type: "SET_SEARCHED_VIDEOS", payload: data.items });
     })();
+    // eslint-disable-next-line
   }, [search]);
   return (
     <div className="Search" style={{ width: "70%", margin: "0 15%" }}>

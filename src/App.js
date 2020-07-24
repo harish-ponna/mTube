@@ -6,7 +6,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import SignIn from "./pages/SignIn";
 import Home from "./pages/Home";
-import Trending from "./pages/Trending";
+// import Trending from "./pages/Trending";
 import Search from "./pages/Search";
 import VideoPlayer from "./pages/VideoPlayer";
 
